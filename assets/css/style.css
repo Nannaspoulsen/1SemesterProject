@@ -1,6 +1,209 @@
+/* Typografi */
+
+@import url('https://fonts.googleapis.com/css2?family=Epilogue:ital,wght@0,100..900;1,100..900&display=swap');
+
+/* Variables */
+
 * {
-    
-}
-body{
     margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
+
+:root {
+    --DeepForest: #2e4600;
+    --FernGreen: #588c42;
+    --FreshMint: #82b56d;
+    --ClearSky: #87ceeb;
+    --PaleStone: #f5f1e4;
+
+    --smSpacer: 15px;
+    --stdSpacer: 20px;
+    --lgSpacer: 40px;
+
+    --font-size-small: .8rem;
+    --font-size-normal: 1rem;
+    --font-size-large: 1.5rem;
+    --font-size-xlarge: 2rem;
+}
+/* General styling */
+h1,h2,h3,h4,h5,h6 {
+    font-family: 'Epilogue', sans-serif;
+    color: var(--DeepForest);
+    padding: var(--smSpacer) 0;
+}
+/* Global Navigation */
+/* Burger-Menu */
+.menu_toggle {
+    z-index: 1;
+    position: absolute;
+    top: 2px;
+    right: 2px;
+    padding: 25px;
+}
+
+.menu_toggle a {
+    text-decoration: none;
+    color: var(--DeepForest);
+    transition: color 0.3s ease;
+}
+
+.menu_toggle span:first-child {
+    transform-origin: 0% 0%;
+}
+
+.menu_toggle span:nth-last-child(2) {
+    transform-origin: 0% 100%;
+}
+
+.menu_toggle input {
+    position: absolute;
+    cursor: pointer;
+    opacity: 0;
+    width: 40px;
+    z-index: 2;
+}
+
+.menu_toggle span {
+    display: block;
+    width: 33px;
+    height: 4px;
+    margin-bottom: 5px;
+    position: relative;
+    background-color: var(--DeepForest);
+    border-radius: 3px;
+    z-index: 1;
+    transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1),
+        background 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), opacity 0.55s ease;
+    transform-origin: 4px 0px;
+}
+
+.menu_toggle input:checked~span {
+    opacity: 1;
+    transform: rotate(45deg) translate(-2px, -1px);
+    background: var(--DeepForest);
+}
+
+.menu_toggle input:checked~span:nth-last-child(3) {
+    opacity: 0;
+    transform: rotate(0deg) scale(0.2, 0.2);
+}
+
+.menu_toggle input:checked~span:nth-last-child(2) {
+    transform: rotate(-45deg) translate(0, -1px);
+}
+
+.active {
+    border-bottom: 2px solid var(--DeepForest);
+}
+
+.menu {
+    position: fixed;
+    top: 0;
+    right: 0;
+    transform: translateX(100%);
+    transition: transform 0.5s ease;
+    width: 200px;
+    height: 100%;
+    background-color: var(--PaleStone);
+    list-style-type: none;
+    padding: 50px;
+    border-bottom-left-radius: 1rem;
+    box-sizing: border-box;
+}
+
+.menu li {
+    padding: 10px 0;
+    font-size: 22px;
+}
+
+.menu_toggle [type="checkbox"]:not(:checked) {
+    opacity: 0;
+}
+
+.menu_toggle input:checked~.menu {
+    transform: translateX(0);
+}
+/* Hero Image */
+
+.hero-index {
+    height: 45vh;
+    background: var(--FreshMint);
+}
+
+/* Footer */
+
+/* ==================
+        Index 
+===================== */
+
+h1 {
+    font-size: var(--font-size-xlarge);
+    text-align: center;
+    margin: var(--lgSpacer) 0;
+    padding: 0;
+}
+
+.fill-image {
+    background: hotpink;
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.cards article {
+    /* border: 2px solid var(--ClearSky); */
+    max-width: 90%;
+    margin: 0 auto;
+    padding: var(--stdSpacer) 0;
+    display: flex;
+    flex-direction: column;
+    font-family: Epilouge, sans-serif;
+}
+
+.button {
+    border: 3px solid var(--ClearSky);
+    border-radius: 6px;
+    text-align: center;
+    padding: 5px;
+    margin-left: auto;
+    margin-right: 10px;
+}
+
+
+/* ==================
+        Nyt Medlem 
+===================== */
+/* ==================
+        Klubhåndbog 
+===================== */
+/* ==================
+        Aktiviteter 
+===================== */
+/* ==================
+        Praktisk Info
+===================== */
+/* ==================
+        Medlemsside 
+===================== */
+
+
+/* Media Queries */
+/* ==================
+        Index 
+===================== */
+/* ==================
+        Nyt Medlem 
+===================== */
+/* ==================
+        Klubhåndbog 
+===================== */
+/* ==================
+        Aktiviteter 
+===================== */
+/* ==================
+        Praktisk Info
+===================== */
+/* ==================
+        Medlemsside 
+===================== */
