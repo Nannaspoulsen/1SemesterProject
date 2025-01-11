@@ -26,7 +26,9 @@
   --font-size-large: 1.5rem;
   --font-size-xlarge: 2rem;
 }
+
 /* General styling */
+
 h1,
 h2,
 h3,
@@ -37,13 +39,28 @@ h6 {
   color: var(--DeepForest);
   padding: var(--stdSpacer);
 }
+
 p {
   font-family: "Epilogue", sans-serif;
   line-height: 1.5;
   padding: var(--stdSpacer);
 }
+
 /* Global Navigation */
+
+.logo {
+  display: inline-block;
+  margin-right: 10px;
+  padding: 10px;
+}
+
+.logo img {
+  width: 55px;
+  height: auto;
+}
+
 /* Burger-Menu */
+
 .menu_toggle {
   z-index: 1;
   position: absolute;
@@ -134,13 +151,15 @@ p {
 .menu_toggle input:checked ~ .menu {
   transform: translateX(0);
 }
+
 /* Hero Image */
 
 .hero-index,
 .hero-klubhaandbog,
 .hero-nytmedlem,
-.hero-aktiviteter {
-  height: 45vh;
+.hero-aktiviteter,
+.hero-praktiskinfo {
+  height: 40vh;
   background: var(--FreshMint);
 }
 
@@ -171,7 +190,7 @@ h1 {
   padding: var(--stdSpacer) 0;
   display: flex;
   flex-direction: column;
-  font-family: Epilouge, sans-serif;
+  font-family: "Epilouge", sans-serif;
 }
 
 .button {
@@ -204,6 +223,41 @@ h1 {
 /* ==================
         Praktisk Info
 ===================== */
+
+.kontaktpersoner {
+  text-align: center;
+  padding: var(--stdSpacer);
+}
+
+.kontaktpersoner h2 {
+  color: var(--DeepForest);
+}
+
+.card-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--smSpacer);
+  max-width: 390px;
+  margin: 0 auto;
+}
+.card{
+  padding: var(--stdSpacer);
+}
+
+.card img {
+  width: 55%;
+  border-radius: var(--smSpacer);
+  margin-bottom: var(--smSpacer);
+}
+
+.card h3 {
+  color: var(--DeepForest);
+}
+
+.card p {
+  color: var(--DeepForest);
+}
+
 /* ==================
         Medlemsside 
 ===================== */
@@ -212,13 +266,13 @@ h1 {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
+  height: 80vh;
   margin: 0;
 }
 
 .login-box {
   background-color: var(--PaleStone);
-  padding: 20px;
+  padding: var(--stdSpacer);
   border-radius: 8px;
   box-shadow: 2px 2px 8px #2e460088;
   width: 300px;
@@ -235,8 +289,8 @@ label {
 
 input {
   width: 100%;
-  padding: 10px;
-  margin-bottom: 25px;
+  padding: var(--smSpacer);
+  margin-bottom: var(--stdSpacer);
   border: 1px solid #ccc;
   border-radius: 4px;
   font-family: "Epilogue", sans-serif;
