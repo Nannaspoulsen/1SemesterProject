@@ -37,13 +37,13 @@ h5,
 h6 {
   font-family: "Epilogue", sans-serif;
   color: var(--DeepForest);
-  padding: var(--stdSpacer);
+  padding-top: var(--stdSpacer);
 }
 
 p {
   font-family: "Epilogue", sans-serif;
   line-height: 1.5;
-  padding: var(--stdSpacer);
+  padding-top: var(--stdSpacer);
 }
 
 /* Global Navigation */
@@ -59,7 +59,20 @@ p {
   height: auto;
 }
 
+a {
+  text-decoration: none;
+  color: white;
+}
+
 /* Burger-Menu */
+
+.navbar-mobile {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: var(--PaleStone);
+  height:75px ;
+}
 
 .menu_toggle {
   z-index: 1;
@@ -122,6 +135,7 @@ p {
 
 .active {
   border-bottom: 2px solid var(--DeepForest);
+  font-weight: bold;
 }
 
 .menu {
@@ -142,6 +156,7 @@ p {
 .menu li {
   padding: 10px 0;
   font-size: 22px;
+  font-family: 'Epilouge', sans-serif;
 }
 
 .menu_toggle [type="checkbox"]:not(:checked) {
@@ -161,9 +176,20 @@ p {
 .hero-praktiskinfo {
   height: 40vh;
   background: var(--FreshMint);
+  margin-top: 75px;
 }
 
 /* Footer */
+
+footer {
+  margin-top: 60px;
+  width: 100%;
+  height: 400px;
+  background-color: var(--DeepForest);
+  text-align: center;
+  padding-top: 50%;
+  color: white;
+}
 
 /* ==================
         Index 
@@ -183,7 +209,7 @@ h1 {
   object-fit: cover;
 }
 
-.cards article {
+article {
   /* border: 2px solid var(--ClearSky); */
   max-width: 90%;
   margin: 0 auto;
@@ -194,14 +220,43 @@ h1 {
 }
 
 .button {
-  border: 3px solid var(--ClearSky);
+  background-color: var(--FernGreen);
+  color: white;
   border-radius: 6px;
   text-align: center;
-  padding: 5px;
+  padding: 10px;
   margin-left: auto;
   margin-right: 10px;
   font-family: "Epilogue", sans-serif;
 }
+
+.nyhedsbrev {
+  display: flex;
+  justify-content: center;
+  margin: 0 auto;
+}
+
+.nyhedsbrev h3 {
+  padding: var(--stdSpacer) 0 var(--smSpacer) 0;
+}
+
+section h4 {
+  text-align: center;
+  margin-block: var(--lgSpacer);
+  font-size: 24px;
+  font-weight: bold;
+}
+.spons-wrap {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+}
+
+.spons-wrap img {
+  width: 100px;
+  height: auto;
+}
+
 
 /* ==================
         Nyt Medlem 
