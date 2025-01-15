@@ -431,12 +431,10 @@ input {
 ===================== */
 
 @media screen and (min-width: 391px) {
- .cards {
+  .body { 
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: var(--smSpacer);
-    max-width: 1200px;
-    margin: 0 auto;
+    grid-template-columns: repeat(4, 1fr);
+    overflow: hidden;
   }
 
 
@@ -477,6 +475,15 @@ input {
     color: var(--DeepForest);
   }
   
+ .cards {
+   display: grid;
+   grid-template-columns: repeat(3, 1fr);
+   gap: 20px;
+   padding-left: 35px;
+   padding-right: 35px;
+   margin: 0 auto;
+ }
+
 }
 
 
