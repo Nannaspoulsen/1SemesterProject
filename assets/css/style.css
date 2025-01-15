@@ -340,9 +340,6 @@ section h4 {
 }
 
 .card-container {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: var(--smSpacer);
   max-width: 390px;
   margin: 0 auto;
 }
@@ -350,18 +347,24 @@ section h4 {
   padding: var(--stdSpacer);
 }
 
+.card a {
+  color: var(--DeepForest);
+}
+
 .card img {
-  width: 55%;
+  width: 75px;
   border-radius: var(--smSpacer);
   margin-bottom: var(--smSpacer);
 }
 
 .card h3 {
   color: var(--DeepForest);
+  padding-bottom: 5px;
 }
 
 .card p {
   color: var(--DeepForest);
+  padding-top: 5px;
 }
 
 /* ==================
