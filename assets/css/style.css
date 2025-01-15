@@ -20,7 +20,6 @@ html {
   --FreshMint: #82b56d;
   --ClearSky: #87ceeb;
   --PaleStone: #f5f1e4;
-
   --smSpacer: 15px;
   --stdSpacer: 20px;
   --lgSpacer: 40px;
@@ -426,6 +425,23 @@ input {
 /* ==================
         Index 
 ===================== */
+
+@media screen and (min-width: 390px) {
+ .cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--smSpacer);
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+}
+
+
+
+
+
+
+
 /* ==================
         Nyt Medlem 
 ===================== */
