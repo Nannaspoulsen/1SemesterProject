@@ -525,6 +525,11 @@ footer {
   padding: 0;
 }
 
+.Fourgrid {
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+}
+
 }
 
 
