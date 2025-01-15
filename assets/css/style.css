@@ -178,7 +178,10 @@ a {
 /* Hero Image */
 
 .hero-index {
-  background-image: url(../img/);
+  background-image: url(../img/RoldSkovOKFacebook8April2022.jpg);
+  height: 45vh;
+  object-fit:cover;
+background-position: 60% 38%;
 }
 
 /* Footer */
