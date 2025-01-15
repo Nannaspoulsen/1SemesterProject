@@ -177,11 +177,14 @@ a {
 
 /* Hero Image */
 
-.hero-index {
-  background-image: url(../img/RoldSkovOKFacebook8April2022.jpg);
-  height: 45vh;
-  object-fit:cover;
-background-position: 60% 38%;
+.hero-index,
+.hero-klubhaandbog,
+.hero-nytmedlem,
+.hero-aktiviteter,
+.hero-praktiskinfo {
+  height: 40vh;
+  background: var(--FreshMint);
+  
 }
 
 /* Footer */
@@ -196,13 +199,14 @@ footer {
 
 section h6 {
   color: white;
-  font-size: 1.2rem;
+  font-size: 1rem;
 }
 
 .NyttigLinks {
   display: flex;
   flex-direction: column;
   padding: var(--stdSpacer);
+  align-items: flex-start;
   gap: 20px;
 }
 
@@ -216,6 +220,7 @@ section h6 {
   display: flex;
   flex-direction: column;
   padding: var(--stdSpacer);
+  align-items: flex-start;
   gap: 20px;
 }
 
@@ -277,7 +282,6 @@ article {
   margin-right: 10px;
   margin-top: 10px;
   font-family: "Epilogue", sans-serif;
-  font-weight: bold;
 }
 
 .nyhedsbrev {
@@ -339,11 +343,11 @@ section h4 {
 }
 
 .card-container {
+  max-width: 390px;
   margin: 0 auto;
 }
-
 .card{
-  padding-bottom: var(--stdSpacer);
+  padding: var(--stdSpacer);
 }
 
 .card a {
@@ -353,7 +357,7 @@ section h4 {
 .card img {
   width: 75px;
   border-radius: var(--smSpacer);
-  /* margin-bottom: var(--smSpacer); */
+  margin-bottom: var(--smSpacer);
 }
 
 .card h3 {
@@ -389,13 +393,9 @@ section h4 {
   box-shadow: 2px 2px 8px #2e460088;
   width: 300px;
   text-align: center;
-  margin-top: var(--lgSpacer);
 }
 
-.login-box p {
-  padding-bottom: 15px;
-  padding-top: 0;
-}
+/* Kan det her virkeligt passe? */
 
 label {
   display: block;
@@ -431,13 +431,18 @@ input {
 ===================== */
 
 @media screen and (min-width: 391px) {
+  .body { 
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    overflow: hidden;
+  }
+
 
   .button:hover {
     background-color: var(--FreshMint);
-    scale: 110%;
+    scale: 120%;
     transition: all 0.3s;
   }
-
 
   .navbar-mobile {
     display: none;
@@ -452,14 +457,10 @@ input {
     height: 75px;
   }
 
-  .menu-desktop li a {
-    font-size: 20px;
-  }
-
   .logo-desktop img {
-    width: 65px;
+    width: 55px;
     display: block;
-    margin-left: 40px;
+    margin-left: 20px;
     margin-top: 10px;
   }
 
@@ -474,13 +475,6 @@ input {
     color: var(--DeepForest);
   }
   
-.Headings h1 {
-  padding-top: 90px;
-  padding-left: 40px;
-  width: 75%;
-  margin: 0 auto;
-}
-
  .cards {
    display: grid;
    grid-template-columns: repeat(3, 1fr);
