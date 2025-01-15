@@ -70,6 +70,10 @@ a {
 
 /* Burger-Menu */
 
+.navbar-desktop {
+  display: none;
+}
+
 .navbar-mobile {
   position: fixed;
   top: 0;
@@ -426,7 +430,7 @@ input {
         Index 
 ===================== */
 
-@media screen and (min-width: 390px) {
+@media screen and (min-width: 391px) {
  .cards {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -434,6 +438,45 @@ input {
     max-width: 1200px;
     margin: 0 auto;
   }
+
+
+  .button:hover {
+    background-color: var(--FreshMint);
+    scale: 120%;
+    transition: all 0.3s;
+  }
+
+  .navbar-mobile {
+    display: none;
+  }
+
+  .navbar-desktop {
+    display: flex;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: var(--PaleStone);
+    height: 75px;
+  }
+
+  .logo-desktop img {
+    width: 55px;
+    display: block;
+    margin-left: 20px;
+    margin-top: 10px;
+  }
+
+  .menu-desktop {
+    list-style-type: none;
+    display: flex;
+    padding: 25px;
+    gap: 20px
+  }
+
+  .menu-desktop a {
+    color: var(--DeepForest);
+  }
+  
 }
 
 
