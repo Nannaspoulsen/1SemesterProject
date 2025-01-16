@@ -4,11 +4,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <meta name="description"
+        content="Log ind på din RSOK profil. Her kan du opdatere dine personlige oplysninger, se træningskalender og meget mere.">
+    <title>Login på RSOK</title>
     <link rel="stylesheet" href="./assets/css/style.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
             integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
-            crossorigin="anonymous" referrerpolicy="no-referrer" />
+            crossorigin="anonymous" referrerpolicy="no-referrer">
 </head>
 
 <body>
@@ -20,7 +22,7 @@
                 </a>
             </div>
             <div class="menu_toggle">
-                <input type="checkbox" />
+                <input type="checkbox">
                 <span></span>
                 <span></span>
                 <span></span>
@@ -32,6 +34,7 @@
                     <li><a href="./praktiskinfo.html">Praktisk Info</a></li>
                     <li class="active"><a href="./medlemsside.html">Medlemsside</a></li>
                 </ul>
+                <i class="fa-solid fa-magnifying-glass right"></i>
             </div>
         </div>
         <div class="navbar-desktop">
@@ -56,29 +59,31 @@
             
             <form>
                 <label for="medlemsnummer">Medlemsnummer</label>
-                <input type="tekst" id="medlemsnummer" placeholder="Indtast medlemsnummer">
+                <input type="text" id="medlemsnummer" placeholder="Indtast medlemsnummer">
                 <label for="adgangskode">Adgangskode</label>
-                <input type="adgangskode" id="adgangskode" placeholder="Indtast adgangskode">
+                <input type="password" id="adgangskode" placeholder="Indtast adgangskode">
                 <div class="login-button">Log ind</div>
             </form>
         </div>
     </main>
         <footer>
             <section class="NyttigLinks">
-                <h6>Nyttige Links</h6>
+                <p>Nyttige Links</p>
                 <a href="https://www.o-service.dk/" target="_blank">O-service.dk</a>
                 <a href="https://www.do-f.dk/" target="_blank">Dansk Orienteringsforbund</a>
                 <a href="https://www.orientering.dk" target="_blank">Information og disskution om O-løb</a>
             </section>
             <section class="NyttigKontakt">
-                <h6>Kontakt</h6>
+                <p>Kontakt</p>
                 <a href="mailto:support@roldskovok.dk">Support@roldskovok.dk</a>
                 <a href="mailto:bestyrelsen@roldskovok.dk">Bestyrelsen@roldskovok.dk</a>
                 <a href="mailto:kortsalg@roldskovok.dk">Kortsalg@roldskovok.dk</a>
             </section>
             <div class="SomeLinks">
-                <a href="https://www.facebook.com/RoldSkovOK/?ref=embed_page"><i class="fa-brands fa-square-facebook"></i></a>
-                <a href="https://www.instagram.com/roldskovorienteringsklub/"><i class="fa-brands fa-instagram"></i></a>
+                <a href="https://www.facebook.com/RoldSkovOK/?ref=embed_page">Facebook<i
+                        class="fa-brands fa-square-facebook"></i></a>
+                <a href="https://www.instagram.com/roldskovorienteringsklub/">Instagram<i
+                        class="fa-brands fa-instagram"></i></a>
             </div>
             <p class="Copyright">Copyright Rold Skov OK &copy; 2025</p>
         </footer>

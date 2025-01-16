@@ -49,6 +49,17 @@ p {
   padding-top: var(--stdSpacer);
 }
 
+.desktop-img {
+  display: none;
+}
+
+.mobile-img {
+  padding-top: var(--stdSpacer);
+}
+
+img {
+  width: 100%;
+}
 /* Global Navigation */
 
 .logo {
@@ -182,24 +193,50 @@ a {
 .hero-nytmedlem,
 .hero-aktiviteter,
 .hero-praktiskinfo {
-  height: 40vh;
+  height: 45vh;
   background: var(--FreshMint);
-  
 }
 
-/* Footer */
+.hero-index {
+      background-image: url(../img/Hero-billeder/RoldSkovOKFacebook8April2022.jpg);
+      background-size: cover;
+      background-position: center;
+}
 
+.hero-nytmedlem {
+  background-image: url(../img/Hero-billeder/2018FindVejDagenInstruktionAfNye.jpg);
+  background-size: cover;
+  background-position: center;
+}
+
+.hero-klubhaandbog {
+  background-image: url(../img/Hero-billeder/RoldSkovOKFacebook7Aug2022.jpg);
+  background-size: cover;
+  background-position: center;
+}
+
+.hero-aktiviteter {
+  background-image: url(../img/Hero-billeder/RoldSkovOKFacebook8April2022.jpg);
+background-size: cover;
+  background-position: center;
+}
+
+.hero-praktiskinfo {
+  background-image: url(../img/Hero-billeder/RoldskovOkNyhedsbrevUge372023.jpg);
+background-size: contain;
+background-repeat: no-repeat;
+  background-position: center;
+  height: 190px;
+}
+
+/* Footer 
+/*  */
 footer {
   margin-top: 60px;
   width: 100%;
   padding: var(--stdSpacer);
   background-color: var(--DeepForest);
   color: white;
-}
-
-section h6 {
-  color: white;
-  font-size: 1rem;
 }
 
 .NyttigLinks {
@@ -224,12 +261,19 @@ section h6 {
   gap: 20px;
 }
 
+.NyttigLinks p, .NyttigKontakt p {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
 .NyttigKontakt a {
   text-decoration: underline;
 }
+
 .SomeLinks {
   padding: var(--stdSpacer);
 }
+
 .fa-brands {
   font-size: 4rem;
   padding-right: 20px;
@@ -239,6 +283,14 @@ section h6 {
   text-align: center;
 }
 
+.SomeLinks a {
+  color: var(--DeepForest);
+  font-size: 1px;
+}
+
+.SomeLinks a i {
+  color: white;
+}
 
 /* ==================
         Index 
@@ -263,7 +315,6 @@ background-color: var(--PaleStone);
 }
 
 article {
-  /* border: 2px solid var(--ClearSky); */
   max-width: 90%;
   margin: 0 auto;
   padding: var(--stdSpacer) 0;
@@ -310,11 +361,6 @@ section h4 {
   width: 100px;
   height: auto;
 }
-
-
-/* ==================
-        Nyt Medlem 
-===================== */
 /* ==================
         Klubhåndbog 
 ===================== */
@@ -326,9 +372,7 @@ section h4 {
   padding-left: var(--stdSpacer);
   margin: 10px;
 }
-/* ==================
-        Aktiviteter 
-===================== */
+
 /* ==================
         Praktisk Info
 ===================== */
@@ -342,10 +386,6 @@ section h4 {
   color: var(--DeepForest);
 }
 
-.card-container {
-  max-width: 390px;
-  margin: 0 auto;
-}
 .card{
   padding: var(--stdSpacer);
 }
@@ -395,8 +435,6 @@ section h4 {
   text-align: center;
 }
 
-/* Kan det her virkeligt passe? */
-
 label {
   display: block;
   text-align: left;
@@ -431,22 +469,32 @@ input {
 ===================== */
 
 @media screen and (min-width: 391px) {
-  .body { 
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    overflow: hidden;
-  }
 
+.hero-aktiviteter, .hero-index, .hero-klubhaandbog, .hero-nytmedlem, .hero-praktiskinfo {
+  height: 50vh;
+}
 
-  .button:hover {
-    background-color: var(--FreshMint);
-    scale: 120%;
-    transition: all 0.3s;
-  }
+.hero-nytmedlem {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 50% 25%;
+}
+.hero-klubhaandbog {
+  background-position: 50% 25%;
+}
+.hero-klubhaandbog {
+  background-position: 50% 55%;
+}
+
+.button:hover {
+  background-color: var(--FreshMint);
+  scale: 120%;
+  transition: all 0.3s;
+}
 
   .navbar-mobile {
     display: none;
-  }
+ }
 
   .navbar-desktop {
     display: flex;
@@ -455,12 +503,19 @@ input {
     width: 100%;
     background-color: var(--PaleStone);
     height: 75px;
-  }
+    /* justify-content: space-around; */
+    align-items: center;
+}
+.right {
+  margin-left: auto;
+  padding-right: 20px;
+  font-size: 1.5rem;
+}
 
   .logo-desktop img {
-    width: 55px;
+    width: 65px;
     display: block;
-    margin-left: 20px;
+    margin-left: 40px;
     margin-top: 10px;
   }
 
@@ -468,19 +523,19 @@ input {
     list-style-type: none;
     display: flex;
     padding: 25px;
-    gap: 20px
+    gap: 20px;
   }
 
   .menu-desktop a {
     color: var(--DeepForest);
+    font-size: 20px;
   }
   
  .cards {
    display: grid;
    grid-template-columns: repeat(3, 1fr);
    gap: 20px;
-   padding-left: 35px;
-   padding-right: 35px;
+   padding-block: var(--stdSpacer);
    margin: 0 auto;
  }
 
@@ -513,6 +568,7 @@ footer {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 5px;
+  padding: var(--stdSpacer);
 }
 
 .card {
@@ -525,31 +581,63 @@ footer {
   padding: 0;
 }
 
+.Headings h1 {
+  max-width: 75%;
+  margin: 0 auto;
+}
+
+.mobile-img {
+  display: none;
+}
+
+.desktop-img {
+  display: block;
+  padding-top: var(--stdSpacer);
+  width: 100%;
+}
+
+.Twogrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
 .Fourgrid {
   display: grid;
-  grid-template-columns: repeat(2,1fr);
+  grid-template-columns: 1fr 1fr;
 }
 
+.Fourgrid img:nth-of-type(1) {
+  grid-column: 1;
+  grid-row: 1;
 }
 
+.Fourgrid article:nth-of-type(1) {
+  grid-column: 2;
+  grid-row: 1;
+}
 
+.Fourgrid img:nth-of-type(2) {
+  grid-column: 2;
+  grid-row: 2;
+}
 
+.Fourgrid article:nth-of-type(2) {
+  grid-column: 1;
+  grid-row: 2;
+}
 
+.Fourgrid img:nth-of-type(3) {
+  grid-column: 1;
+  grid-row: 3;
+}
 
+.Fourgrid article:nth-of-type(3) {
+  grid-column: 2;
+  grid-row: 3;
+}
 
-
-/* ==================
-        Nyt Medlem 
-===================== */
-/* ==================
-        Klubhåndbog 
-===================== */
-/* ==================
-        Aktiviteter 
-===================== */
-/* ==================
-        Praktisk Info
-===================== */
-/* ==================
-        Medlemsside 
-===================== */
+.Fourgrid article:nth-of-type(4) {
+  grid-column: 1 / span 2;
+  grid-row: 4;
+}
+}
